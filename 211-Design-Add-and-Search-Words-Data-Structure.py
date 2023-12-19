@@ -20,8 +20,7 @@ class WordDictionary:
             cur = root
 
             for i in range(j, len(word)):
-                c = word[i]
-                if c == ".":
+                if (c := word[i]) == ".":
                     for child in cur.children.values():
                         if dfs(i + 1, child):
                             return True

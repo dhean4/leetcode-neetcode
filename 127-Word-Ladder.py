@@ -15,8 +15,7 @@ class Solution:
         res = 1
         while q:
             for i in range(len(q)):
-                word = q.popleft()
-                if word == endWord:
+                if (word := q.popleft()) == endWord:
                     return res
                 for j in range(len(word)):
                     pattern = word[:j] + "*" + word[j + 1:]
