@@ -10,7 +10,7 @@ class Solution:
                 pattern = word[:j] + "*" + word[j + 1:]
                 nei[pattern].append(word)
         
-        visit = set([beginWord])
+        visit = {beginWord}
         q = deque([beginWord])
         res = 1
         while q:
